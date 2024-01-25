@@ -1,25 +1,77 @@
-﻿using exemploExplorando.Models;
+﻿using System.Reflection;
+using exemploExplorando.Models;
+using Newtonsoft.Json;
+
+
+var TipoAnonimo = new { Nome = "Leonardo", Sobrenome = "Buta", Altura = 1.80M };
+
+Console.WriteLine("Nome: " + TipoAnonimo.Nome);
+Console.WriteLine("Sobrenome: " + TipoAnonimo.Sobrenome);
+Console.WriteLine("Altura: " + TipoAnonimo.Altura);
+
+
+
+// string ConteudoArquivo = File.ReadAllText("Arquivos/vendas.json");
+
+// List<Venda> listaVenda = JsonConvert.DeserializeObject<List<Venda>>(ConteudoArquivo);
+
+// foreach (Venda venda in listaVenda)
+// {
+//     Console.WriteLine($"Id: {venda.Id}, Produto: {venda.Produto}," +
+//                        $"Preco: {venda.Preco}, Data: {venda.DataVenda.ToString("dd/MM/yyy HH:mm")}" +
+//                        $"{(venda.Desconto.HasValue ? $"Desconto de: {venda.Desconto}" : "")}");
+
+// }
+// bool? desejaReceberEmail = true;
+
+// if (desejaReceberEmail.HasValue && desejaReceberEmail.Value)
+// {
+//     Console.WriteLine("O usuário optou por receber email.");
+// }
+// else
+// {
+//     Console.WriteLine("O usuário não respondeu ou optou por receber email.");
+// }
+
+// DateTime dataAtual = DateTime.Now;
+
+// List<Venda> listaVendas = new List<Venda>();
+
+// Venda v1 = new Venda(1, "Material de escritório", 25.00M, dataAtual);
+// Venda v2 = new Venda(2, "Licença Windows", 100.00M, dataAtual);
+// Venda v3 = new Venda(3, "Mouse", 10.00M, dataAtual);
+
+// listaVendas.Add(v1);
+// listaVendas.Add(v2);
+// listaVendas.Add(v3);
+
+// string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
+
+// File.WriteAllText("Arquivos/vendas.json", serializado);
+
+// Console.WriteLine(serializado);
 
 
 
 
 
-LeituraArquivo arquivo = new LeituraArquivo(); ///
 
-var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+// LeituraArquivo arquivo = new LeituraArquivo(); ///
 
-if (sucesso)
-{
-    Console.WriteLine("Quantidade Linhas do arquivo" + quantidadeLinhas);
-    foreach (string linha in linhasArquivo)
-    {
-        Console.WriteLine(linha);
-    }
-}
-else
-{
-    Console.WriteLine("Não foi possível ler o arquivo.");
-}
+// var (sucesso, linhasArquivo, quantidadeLinhas) = arquivo.LerArquivo("Arquivos/arquivoLeitura.txt");
+
+// if (sucesso)
+// {
+//     Console.WriteLine("Quantidade Linhas do arquivo" + quantidadeLinhas);
+//     foreach (string linha in linhasArquivo)
+//     {
+//         Console.WriteLine(linha);
+//     }
+// }
+// else
+// {
+//     Console.WriteLine("Não foi possível ler o arquivo.");
+// }
 
 
 
